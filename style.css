@@ -2,7 +2,7 @@ body {
   background-color: rgb(222, 222, 222);
 }
 
-/* NOTE These are all the text settings */
+/* NOTE These are all the font settings */
 h1 {
   margin: 0px;
   font-family: 'Oswald', sans-serif;
@@ -72,7 +72,7 @@ a:hover {
 }
 
 .placeholder-text {
-  font-size: 12px;
+  font-size: 24px;
 
 }
 
@@ -108,6 +108,30 @@ a:hover {
 
 .bg-darkgrey {
   background-color: rgb(41, 37, 48);
+}
+
+#bee {
+  margin-left: 20px !important;
+}
+
+#lock {
+  color: rgb(128, 212, 162) !important;
+  margin-left: 20px !important;
+}
+
+#bike {
+  color: red !important;
+  margin-left: 20px !important;
+}
+
+#wifi {
+  color: blue !important;
+  margin-left: 20px !important;
+}
+
+#coffee {
+  color: rgb(79, 45, 31) !important;
+  margin-left: 20px !important;
 }
 
 /* NOTE These are the section classes */
@@ -160,6 +184,8 @@ footer {
 }
 
 /* NOTE These are the img classes */
+#splash-video {}
+
 .splash-page {
   padding-top: 50px;
   min-height: 70vh;
@@ -169,6 +195,7 @@ footer {
 
 .canoe {
   height: auto;
+  max-height: 80vh;
   width: 25vw;
   padding: 2rem;
   margin: 5rem;
@@ -180,12 +207,12 @@ footer {
   background-color: rgb(41, 37, 48, .4);
   border-color: rgb(211, 159, 91) !important;
   width: 30vw;
-  max-height: 15vh;
+  max-height: 20vh;
   margin-top: 50px;
 }
 
 .form-card {
-  min-height: 50vh;
+  height: auto;
   width: 25vw;
   padding: 2rem;
   position: relative;
@@ -203,8 +230,13 @@ footer {
 }
 
 .review-card {
-  box-shadow: 5px 5px 20px rgb(39, 39, 39, .5);
+  box-shadow: 5px 5px 20px rgba(39, 39, 39, 0.5);
   margin-top: 50px !important;
+  transition-duration: .5s;
+}
+
+.review-card:hover {
+  box-shadow: 5px 5px 20px rgba(255, 192, 110, 0.8);
 }
 
 .describe-info {

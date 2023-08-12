@@ -15,31 +15,31 @@
 </head>
 
 <!-- NOTE body containing contents of site -->
-<main>
 
-  <body class="container-fluid">
+<body class="container-fluid" id="nav-scroll">
 
-    <!-- NOTE Navigation, sticky header -->
-    <header class="row align-items-center text-center navigation">
-      <div class="col-12 col-md-6 d-md-flex">
-        <h1 class="logo-title ms-md-4 lightgrey">
-          <i class="mdi mdi-beehive-outline beehive"></i>The Beehive
-        </h1>
-      </div>
-      <div class="col-12 col-md-2 p-1">
-        <a href="" class="nav-text lightgrey">Booking</a>
-      </div>
-      <div class="col-12 col-md-2 p-1">
-        <a href="" class="nav-text lightgrey">Explore</a>
-      </div>
-      <div class="col-12 col-md-2 p-1">
-        <a href="" class="nav-text lightgrey">About</a>
-      </div>
-      </div>
-    </header>
+  <!-- NOTE Navigation, sticky header -->
+  <header class="row align-items-center text-center navigation">
+    <div class="col-12 col-md-6 d-md-flex">
+      <h1 class="logo-title ms-md-4 lightgrey">
+        <i class="mdi mdi-beehive-outline beehive"></i><a href="#nav-scroll">The Beehive</a>
+      </h1>
+    </div>
+    <div class="col-12 col-md-2 p-1">
+      <a href="#splash-scroll" class="nav-text lightgrey">Booking</a>
+    </div>
+    <div class="col-12 col-md-2 p-1">
+      <a href="#info-scroll" class="nav-text lightgrey">Explore</a>
+    </div>
+    <div class="col-12 col-md-2 p-1">
+      <a href="#reviews-scroll" class="nav-text lightgrey">About</a>
+    </div>
+    </div>
+  </header>
 
-    <!-- NOTE row area for splash page. form card stays and title disappears -->
-    <section class="row splash-page">
+  <!-- NOTE row area for splash page. form card stays and title disappears -->
+  <main>
+    <section class="row splash-page" id="splash-scroll">
       <div class="col-12 col-md-5 d-flex justify-content-center ">
         <!-- NOTE Form -->
         <div class="mb-3">
@@ -76,7 +76,7 @@
     </section>
 
     <!-- NOTE row area for icon card. position is relative to spill into next section on desktop view -->
-    <section class="row bg-orange align-items-center text-center icon-banner">
+    <section class="row bg-orange align-items-center text-center icon-banner" id="info-scroll">
       <div class="col-12 col-md-6 p-3 p-md-5 order-2">
         <div class="icon-wrapper m-1 m-md-5">
           <h3 class="icon-heading lightgrey">Luxury Cabin</h3><br>
@@ -89,25 +89,30 @@
         </div>
       </div>
       <div class="col-12 col-md-6 icon-card bg-lightgrey order-1">
-        <i class="mdi mdi-bee d-flex darkgrey icon-card-icons"><span
-            class="placeholder w-75 darkgrey placeholder-text"></span></i>
-        <i class="mdi mdi-wifi d-flex darkgrey icon-card-icons"><span
-            class="placeholder w-75 darkgrey placeholder-text"></span></i>
-        <i class="mdi mdi-coffee d-flex darkgrey icon-card-icons"><span
-            class="placeholder w-25 darkgrey placeholder-text"></span></i>
-        <i class="mdi mdi-lock d-flex darkgrey icon-card-icons"><span
-            class="placeholder w-50 darkgrey placeholder-text"></span></i>
-        <i class="mdi mdi-bicycle d-flex darkgrey icon-card-icons"><span
-            class="placeholder w-25 darkgrey placeholder-text"></span></i>
+        <i class="mdi mdi-bee d-flex orange icon-card-icons"><span class="placeholder w-25 orange placeholder-text"
+            id="bee"></span></i>
+        <i class="mdi mdi-wifi d-flex icon-card-icons"><span class="placeholder px-2 w-50 darkgrey placeholder-text"
+            id="wifi"></span></i>
+        <i class="mdi mdi-coffee d-flex icon-card-icons"><span class="placeholder px-2 w-25 darkgrey placeholder-text"
+            id="coffee"></span></i>
+        <i class="mdi mdi-lock d-flex icon-card-icons"><span class="placeholder px-2 w-50 darkgrey placeholder-text"
+            id="lock"></span></i>
+        <i class="mdi mdi-bicycle d-flex icon-card-icons"><span class="placeholder px-2 w-25 placeholder-text"
+            id="bike"></span></i>
       </div>
     </section>
 
     <!-- NOTE row area for description content and portrait image -->
     <section class="row describe text-center align-items-center bg-lightgrey">
       <div class="col-12 col-md-5">
-        <img class="canoe"
+        <video autoplay muted loop class="canoe" id="splash-video">
+          <source
+            src="https://media.istockphoto.com/id/1493662267/video/a-pier-on-lake-brienz.mp4?s=mp4-640x640-is&k=20&c=uPJBuuDrBjJcFYWJJCd7wsXKlqRbYZq5hsthSfx5aWk="
+            type="video/mp4">
+        </video>
+        <!-- <img class="canoe"
           src="https://images.unsplash.com/photo-1495612778264-627cd2e6dfb3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80"
-          alt="vacation picture">
+          alt="vacation picture"> -->
       </div>
       <div class="col-12 col-md-7 text-start describe-info">
         <i class="mdi mdi-shield-star d-flex orange shield-icon"></i>
@@ -123,8 +128,8 @@
     </section>
 
     <!-- NOTE review cards. Highlight card is moved to the top in mobile -->
-    <section class="row reviews align-items-center">
-      <div class="col-12 col-md-4 text-center order-2 order-md-1">
+    <section class="row reviews align-items-center" id="reviews-scroll">
+      <div class="col-12 col-lg-4 text-center order-2 order-md-1">
         <div class="review-card my-3 m-md-5 p-3 p-md-5 bg-lightgrey rounded">
           <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum dignissimos repellat ipsam laboriosam
             asperiores totam iusto vero, blanditiis ut similique at sed quaerat voluptates"</p>
@@ -132,7 +137,7 @@
           <p class="orange">Occupation and Title</p>
         </div>
       </div>
-      <div class="col-12 col-md-4 text-center order-1 order-md-2">
+      <div class="col-12 col-lg-4 text-center order-1 order-md-2">
         <div class="review-card my-3 m-md-5 p-3 p-md-5 bg-lightgrey rounded" id="highlight-card">
           <i class="mdi mdi-star orange"></i><i class="mdi mdi-star orange"></i><i class="mdi mdi-star orange"></i>
           <p class="mt-2">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum dignissimos repellat ipsam
@@ -142,7 +147,7 @@
           <p class="orange">Occupation and Title</p>
         </div>
       </div>
-      <div class="col 12 col-md-4 text-center order-3 order-md-3">
+      <div class="col 12 col-lg-4 text-center order-3 order-md-3">
         <div class="review-card my-3 m-md-5 p-3 p-md-5 bg-lightgrey rounded">
           <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum dignissimos repellat ipsam laboriosam
             asperiores totam iusto vero, blanditiis ut similique at sed quaerat voluptates"</p>
@@ -173,8 +178,8 @@
         <p class="darkgrey align-self-center">FAQ</p>
         <p class="darkgrey align-self-center">Amenities</p>
       </div>
-    </footer>
-  </body>
-</main>
+  </main>
+  </footer>
+</body>
 
 </html>
